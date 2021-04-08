@@ -20,7 +20,7 @@ bot.on("ready", () => {
 });
 
 bot.on("message", (msg) => {
-  const args = msg.content.split(/ +/);
+  const args = msg.content.split(/ +/).slice(prefix.length);
   const command = args.shift().toLowerCase();
   console.info(`Called command: ${command}`);
 
